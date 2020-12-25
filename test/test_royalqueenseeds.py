@@ -1,11 +1,11 @@
 import unittest
 from selenium import webdriver
-from jenkins-unittest.base.page_base import BaseClass
-from jenkins-unittest.page.cart_page import RoyalQueenSeedsCart
-from jenkins-unittest.page.category_page import RoyalQueenSeedsCategory
-from jenkins-unittest.page.login_page import RoyalQueenSeedsLogin
-from jenkins-unittest.page.main_page import RoyalQueenSeedsMain
-from jenkins-unittest.page.product_page import RoyalQueenSeedsProduct
+from base.page_base import BaseClass
+from page.cart_page import RoyalQueenSeedsCart
+from page.category_page import RoyalQueenSeedsCategory
+from page.login_page import RoyalQueenSeedsLogin
+from page.main_page import RoyalQueenSeedsMain
+from page.product_page import RoyalQueenSeedsProduct
 
 
 class RoyalQueenSeedsHappyPath(unittest.TestCase):

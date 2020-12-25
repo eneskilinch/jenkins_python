@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from jenkins-unittest.base.page_base import BaseClass
+from base.page_base import BaseClass
 
 
 class RoyalQueenSeedsLogin:
