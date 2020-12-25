@@ -1,6 +1,6 @@
 from random import choice
 from selenium.webdriver.common.by import By
-from releasepy.happy_path_efe.royalqueenseeds.base.page_base import BaseClass
+from jenkins-unittest.base.page_base import BaseClass
 
 
 class RoyalQueenSeedsCategory:
