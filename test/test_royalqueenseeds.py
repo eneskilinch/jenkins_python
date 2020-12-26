@@ -1,4 +1,5 @@
 import unittest
+from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
 from base.page_base import BaseClass
 from page.cart_page import RoyalQueenSeedsCart
@@ -23,9 +24,9 @@ class RoyalQueenSeedsHappyPath(unittest.TestCase):
       """
 
     def setUp(self):
-        # self.chrome_options = webdriver.ChromeOptions()
-        # self.chrome_options.add_argument('--disable-notifications')
-        self.driver = webdriver.Chrome()  # options=self.chrome_options
+        self.chrome_options = Options()
+        self.chrome_options.add_argument('--disable-notifications')
+        self.driver = webdriver.Chrome('/home/ubuntu/Github/jenkins_python/chromedriver', chrome_options=self.chrome_options)
         self.driver.maximize_window()
         self.methods = BaseClass(self.driver)
         self.royalqueenseeds_main_page = RoyalQueenSeedsMain(self.driver)
