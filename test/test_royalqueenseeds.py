@@ -1,5 +1,4 @@
 import unittest
-from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
 from base.page_base import BaseClass
 from page.cart_page import RoyalQueenSeedsCart
@@ -11,7 +10,7 @@ from page.product_page import RoyalQueenSeedsProduct
 
 class RoyalQueenSeedsHappyPath(unittest.TestCase):
     """Test case is:
-      1. Go to given website 
+      1. Go to given website
       2. Click login page button
       3. Try to logged in
       4. Go to random category page
@@ -24,9 +23,9 @@ class RoyalQueenSeedsHappyPath(unittest.TestCase):
       """
 
     def setUp(self):
-        self.chrome_options = Options()
+        self.chrome_options = webdriver.ChromeOptions()
         self.chrome_options.add_argument('--disable-notifications')
-        self.driver = webdriver.Chrome('/usr/bin/chromedriver', chrome_options=self.chrome_options)
+        self.driver = webdriver.Chrome('/usr/bin/chromedriver', options=self.chrome_options)
         self.driver.maximize_window()
         self.methods = BaseClass(self.driver)
         self.royalqueenseeds_main_page = RoyalQueenSeedsMain(self.driver)
