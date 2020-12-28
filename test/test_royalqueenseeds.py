@@ -26,7 +26,7 @@ class RoyalQueenSeedsHappyPath(unittest.TestCase):
     def setUp(self):
         self.chrome_options = Options()
         self.chrome_options.add_argument('--disable-notifications')
-        self.driver = webdriver.Chrome('/home/ubuntu/Github/jenkins_python/chromedriver', options=self.chrome_options)
+        self.driver = webdriver.Chrome(options=self.chrome_options)
         self.driver.maximize_window()
         self.methods = BaseClass(self.driver)
         self.royalqueenseeds_main_page = RoyalQueenSeedsMain(self.driver)
