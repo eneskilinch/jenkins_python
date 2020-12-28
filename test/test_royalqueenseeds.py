@@ -11,7 +11,7 @@ from page.product_page import RoyalQueenSeedsProduct
 
 class RoyalQueenSeedsHappyPath(unittest.TestCase):
     """Test case is:
-      1. Go to given website
+      1. Go to given website 
       2. Click login page button
       3. Try to logged in
       4. Go to random category page

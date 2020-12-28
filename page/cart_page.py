@@ -35,7 +35,7 @@ class RoyalQueenSeedsCart:
 
     def delete_items_from_cart(self):
         """
-        Deletes product from the cart page and check if it is any left. If it is exist, deletes that one too
+        Deletes product from the cart page and check if it is any left. If it is exist, deletes that one, too
 
         """
         while self.methods.presence_of_element_located(self.EMPTY_CART):

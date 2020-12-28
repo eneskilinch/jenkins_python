@@ -48,7 +48,7 @@ class RoyalQueenSeedsProduct:
             try:
                 sleep(1)
                 successfully_added = self.methods.presence_of_element_located(self.ADDED_TO_CART).text
-                assert cart_total != successfully_added  # change assertion if any bug appears.
+                assert cart_total != successfully_added  # change assertion if any bug appears
             except AssertionError:
                 self.add_product_to_cart()
         else:
