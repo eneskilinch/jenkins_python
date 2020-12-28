@@ -1,7 +1,7 @@
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
 from base.page_base import BaseClass
-from selenium.webdriver.common.keys import Keys
+from time import sleep
 
 
 class RoyalQueenSeedsCart:
@@ -38,12 +38,10 @@ class RoyalQueenSeedsCart:
         Deletes product from the cart page and check if it is any left. If it is exist, deletes that one too
 
         """
-        self.methods.wait_for_element(self.SCROLL_TO_TOP).send_keys(Keys.CONTROL + Keys.HOME)
-        if self.methods.element_exists(self.DELETE_ITEM):
+        while self.methods.presence_of_element_located(self.EMPTY_CART):
             try:
-                self.methods.wait_for_element(self.DELETE_ITEM).click()
-                assert self.methods.wait_for_element(self.EMPTY_CART).is_displayed, True
-            except TimeoutException or AssertionError:
-                self.delete_items_from_cart()
-        else:
-            assert self.methods.wait_for_element(self.EMPTY_CART).is_displayed
+                self.methods.presence_of_element_located(self.DELETE_ITEM).click()
+                sleep(2)
+            except TimeoutException:
+                break
+        assert self.methods.presence_of_element_located(self.EMPTY_CART).is_displayed
