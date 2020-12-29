@@ -1,7 +1,7 @@
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 from base.page_base import BaseClass
-from time import sleep
 
 
 class RoyalQueenSeedsCart:
