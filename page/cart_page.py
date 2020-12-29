@@ -35,13 +35,14 @@ class RoyalQueenSeedsCart:
 
     def delete_items_from_cart(self):
         """
-        Deletes product from the cart page and check if it is any left. If it is exist, deletes that one, too
-
+        Deletes product from the cart page and check if it is any left. If it is exist, deletes that one too
         """
-        while self.methods.presence_of_element_located(self.EMPTY_CART):
+        self.methods.wait_for_element(self.SCROLL_TO_TOP).send_keys(Keys.CONTROL + Keys.HOME)
+        if self.methods.element_exists(self.DELETE_ITEM):
             try:
-                self.methods.presence_of_element_located(self.DELETE_ITEM).click()
-                sleep(2)
-            except TimeoutException:
-                break
-        assert self.methods.presence_of_element_located(self.EMPTY_CART).is_displayed
+                self.methods.wait_for_element(self.DELETE_ITEM).click()
+                assert self.methods.wait_for_element(self.EMPTY_CART).is_displayed, True
+            except TimeoutException or AssertionError:
+                self.delete_items_from_cart()
+        else:
+            assert self.methods.wait_for_element(self.EMPTY_CART).is_displayed
