@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from base.page_base import BaseClass
+from page_base import BaseClass
 from time import sleep
 
 

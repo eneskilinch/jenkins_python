@@ -1,11 +1,11 @@
 import unittest
 from selenium import webdriver
-from base.page_base import BaseClass
-from page.cart_page import RoyalQueenSeedsCart
-from page.category_page import RoyalQueenSeedsCategory
-from page.login_page import RoyalQueenSeedsLogin
-from page.main_page import RoyalQueenSeedsMain
-from page.product_page import RoyalQueenSeedsProduct
+from page_base import BaseClass
+from cart_page import RoyalQueenSeedsCart
+from category_page import RoyalQueenSeedsCategory
+from login_page import RoyalQueenSeedsLogin
+from main_page import RoyalQueenSeedsMain
+from product_page import RoyalQueenSeedsProduct
 
 
 class RoyalQueenSeedsHappyPath(unittest.TestCase):
