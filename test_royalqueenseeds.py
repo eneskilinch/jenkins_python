@@ -19,7 +19,7 @@ class RoyalQueenSeedsHappyPath(unittest.TestCase):
       7. Add product to cart
       8. Go to cart page
       9. Go to checkout page
-      10. Delete items from cart and tear down
+      10. Delete items from cart and tear dow
       """
 
     def setUp(self):
