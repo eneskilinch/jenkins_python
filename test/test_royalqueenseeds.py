@@ -1,6 +1,6 @@
 import unittest
 from selenium import webdriver
-from base.page_base import BaseClass
+from page_base import BaseClass
 from page.cart_page import RoyalQueenSeedsCart
 from page.category_page import RoyalQueenSeedsCategory
 from page.login_page import RoyalQueenSeedsLogin
